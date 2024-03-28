@@ -43,9 +43,9 @@ const Product=()=>{
         <TableHead style={{backgroundColor : "lightgrey"}}>
           <TableRow>
             <TableCell colSpan={2}>Title</TableCell>
-            <TableCell align="left">Category</TableCell>
-            <TableCell align="left">Price</TableCell>
-            <TableCell align="left">Available Count</TableCell>
+            <TableCell>Category</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell>Available Count</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -55,12 +55,12 @@ const Product=()=>{
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                              >
                                  <TableCell component="th" scope="row">
-                             <img src={product.image} height={"25px"} width={"25px"}/>
+                             <img src={product.image} height={"30px"} width={"25px"}/>
                                </TableCell>
-                               <TableCell >{product.title}</TableCell>
-                               <TableCell align="left">{product.category}</TableCell>
-                               <TableCell align="left">Price -${product.price}</TableCell>
-                               <TableCell align="left">{product.rating.rate}</TableCell>
+                               <TableCell ><Link to={"product/"+ product.id} className="app-link">{product.title}</Link></TableCell>
+                               <TableCell >{product.category}</TableCell>
+                               <TableCell >Price -${product.price}</TableCell>
+                               <TableCell>{product.rating.rate}</TableCell>
                  
                               
                              </TableRow>
