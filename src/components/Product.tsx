@@ -36,17 +36,16 @@ const Product=()=>{
     
     return(
         <>
-           
-            
-                    <h3>PRODUCT</h3>
+                   
+                    <h3>Product List</h3>
                     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
+        <TableHead style={{backgroundColor : "lightgrey"}}>
           <TableRow>
-            <TableCell>Title</TableCell>
-            <TableCell align="right">Category</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Available Count</TableCell>
+            <TableCell colSpan={2}>Title</TableCell>
+            <TableCell align="left">Category</TableCell>
+            <TableCell align="left">Price</TableCell>
+            <TableCell align="left">Available Count</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -56,11 +55,12 @@ const Product=()=>{
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                              >
                                  <TableCell component="th" scope="row">
-                             <img src={product.image}  alt={product.title} height={"50px"} width={"200px"}/>
+                             <img src={product.image} height={"25px"} width={"25px"}/>
                                </TableCell>
-                               <TableCell align="right">{product.category}</TableCell>
-                               <TableCell align="right">Price -${product.price}</TableCell>
-                               <TableCell align="right">{product.rating.rate}</TableCell>
+                               <TableCell >{product.title}</TableCell>
+                               <TableCell align="left">{product.category}</TableCell>
+                               <TableCell align="left">Price -${product.price}</TableCell>
+                               <TableCell align="left">{product.rating.rate}</TableCell>
                  
                               
                              </TableRow>
